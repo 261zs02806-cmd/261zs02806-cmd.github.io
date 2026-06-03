@@ -1,7 +1,3 @@
-/* --------------------
-        全体
--------------------- */
-
 :root {
   --theme-color: #00a0a0;
 }
@@ -10,68 +6,89 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   margin: 0;
-  padding: 30px;
+  background: #f4f7f9;
+  font-family: sans-serif;
   color: #333;
 }
 
-/* --------------------
-        見出し
--------------------- */
-
-h1, h2, h3 {
-  color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
 }
 
-/* --------------------
-        リンク
--------------------- */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--theme-color);
+}
+
+.subtitle {
+  color: #666;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: var(--theme-color);
+}
+
+h2 {
+  color: var(--theme-color);
+  border-bottom: 3px solid var(--theme-color);
+  padding-bottom: 5px;
+}
 
 a {
   color: var(--theme-color);
   text-decoration: none;
+  transition: 0.3s;
 }
 
-/* --------------------
-        リスト
--------------------- */
+a:hover {
+  opacity: 0.7;
+}
 
 ul {
-  list-style: none;
-}
-li:before {
-  content: "★";
-  color: var(--theme-color);
+  padding-left: 20px;
 }
 
-/* --------------------
-          表
--------------------- */
+li {
+  margin-bottom: 8px;
+}
 
 table {
-  border-spacing: 0;
+  width: 100%;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
-  min-width: 70%;
 }
-tr {
-  background-color: #fff;
-}
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
-}
+
 th {
   background: var(--theme-color);
-  color: #fff;
+  color: white;
+  width: 30%;
 }
-th, td {
-  border: solid 1px #f0f0f0;
-  padding: 0.5rem;
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background: #f8f8f8;
 }
